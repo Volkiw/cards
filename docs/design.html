@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Milonga&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <title>MagicLAB</title>
+    
+    <link rel="stylesheet" href="./assets/main-9b3f8a48.css">
+  </head>
+
+  <body>
+   <header class="header">
+  <h1 class="header__title">MagicLab</h1>
+</header>
+    <main class="main-design">
+      <section class="section-form">
+        <section class="section-design form-design">
+    <div class="section-design__title">
+        <p><strong>Decora tu carta</strong></p>
+        <button class="arrow"></button>
+    </div>
+    <span class="line-shadow"></span>
+    <form class="form-background">
+       <div class="form-background__options">
+            <input name="background" type="radio" id="bg-1"  value="bg-1">
+            <label for="bg-1" class="form-background__img form-background__img--1"></label>
+        </div>
+        <div class="form-background__options">
+            <input name="background" type="radio" id="bg-2" value="bg-2">
+            <label for="bg-2" class="form-background__img form-background__img--2"></label>
+        </div>
+        <div class="form-background__options">
+            <input name="background" type="radio" id="bg-3" value="bg-3">
+            <label for="bg-3" class="form-background__img form-background__img--3"></label>
+        </div>
+        <div class="form-background__options">
+            <input name="background" type="radio" id="bg-4" value="bg-4">
+            <label for="bg-4" class="form-background__img form-background__img--4"></label>
+        </div>
+    </form>
+</section>
+<section class="section-design form-fill">
+    <div class="section-design__title">
+        <p><strong>Crea tu personaje</strong></p>
+        <button class="arrow"></button>
+    </div>
+    <span class="line-shadow"></span>
+    <form class="form">
+        <label for="name" class="label">Nombre</label>
+            <input id="name" class="input" type="text" required placeholder="ej. Eowyn"/>
+        <p class="label">Elemento:</p>
+        <div class="checkbox-box">
+            <input type="checkbox" id="tierra" name="tierra" value="tierra">
+            <label for="tierra"> Tierra</label>
+            <input type="checkbox" id="fuego" name="fuego" value="fuego">
+            <label for="fuego"> Fuego</label>
+            <input type="checkbox" id="agua" name="agua" value="agua">
+            <label for=""> Agua</label>
+            <input type="checkbox" id="viento" name="viento" value="viento">
+            <label for=""> Viento</label>
+        </div>
+
+        <label for="picture" class="label">Imagen:</label>
+        <input type="file" id="picture" class="input"  name="picture" />
+
+
+        <label for="family" class="label">Criatura:</label>
+        <select class="input" name="family" id="family">
+            <option  selected disabled value="">Elige una criatura legendaria</option>
+            <option value="Elfo">Elfo</option>
+            <option value="Goblins">Goblins</option>
+            <option value="Hada">Hada</option>
+            <option value="Dracónido">Dracónido</option>
+            <option value="Hobbit">Hobbit</option>
+        </select>
+
+        <!-- NUMBER CONTROLAR EL MÁXIMO 100 SI FUNCIONA -->
+        <label for="level" class="label">Nivel (máx. 100):</label>
+            <input id="level" class="input" type="number" required placeholder="1"  min="1" max="100"/>
+        
+        <label for="description" class="label">Descripción:</label>
+            <textarea id="description" class="textarea input" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
+        
+        <label for="skill" class="label">Habilidad:</label>
+        <select class="input" name="skill" id="skill">
+            <option selected disabled value="">Elige una habilidad</option>
+            <option value="Barrera de luz">Barrera de luz</option>
+            <option value="Paso sombrío">Paso sombrío</option>
+            <option value="Afinidad natural">Afinidad natural</option>
+            <option value="Previsión etérea">Previsión etérea</option>
+            <option value="Rugido de núcleo">Rugido de núcleo</option>
+        </select>
+
+        <label for="origin" class="label">Origen:</label>
+        <select class="input" name="origin" id="origin">
+            <option selected disabled value="">Elige un lugar</option>
+            <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
+            <option value="Ondar">Ondar (Seres Abisales)</option>
+            <option value="Igryn">Igryn (Hijos de la Llama)</option>
+            <option value="Nefelyr">Nefelyr (Errantes del Viento)</option>
+            <option value="Terragónida">Terragónida (Guardianes de Raíz)</option>
+        </select>
+        <label for="arma" class="label">Arma:</label>
+        <select class="input" name="arma" id="arma">
+            <option selected disabled value="">Elige un arma</option>
+            <option value="Daga">Daga</option>
+            <option value="Báculo">Báculo</option>
+            <option value="Martillo">Martillo</option>
+            <option value="Talismán">Talismán</option>
+            <option value="Arco">Arco</option>
+        </select>
+        
+    </form>
+</section>
+<section class="section-design form-share">
+    <div class="section-design__title">
+        <p><strong>Comparte</strong></p>
+        <button class="arrow"></button>
+    </div>
+    <span class="line-shadow"></span>
+    <div class="inside-share">
+        <button href="share.html">Comparte</button>
+    </div>
+</section>
+      </section>
+      <section class="section-card">
+        <div class="card">
+  <div class="card__top">
+   <div class="card-title">
+     <p class="card-title__name">Éowyn, lady of Rohan</p>
+     <div class="elements">
+       <img class="elements__img" src="./images/agua.png"/>
+       <img class="elements__img" src="./images/viento.png"/>
+       <img class="elements__img" src="./images/tierra.png"/>
+       <img class="elements__img" src="./images/fuego.png"/>
+     </div>
+   </div>
+   <div class="card-image"></div>
+   <div class="card-type">
+     <p class="card-type__family">Criatura legendaria: <span>Humana</span></p>
+     <p class="card-type__level">Nivel <span>58</span></p>
+   </div>
+  </div>
+  <div class="card__bottom">
+   <div class="card-desc">
+     <p class="card-desc__text">Éowyn es un personaje de la novela fantástica El Señor de los Anillos, de J. R. R. Tolkien. Es una noble de Rohan.</p>
+     <div class="card-desc__info">
+       <div class="info">
+          <img class="info__img" src="./images/skill.png"/>
+          <p class="info__text">Rugido de núcleo</p>
+       </div>
+       <div class="info">
+          <img class="info__img" src="./images/origin.png"/>
+          <p class="info__text">Terragónida</p>
+       </div>
+       <div class="info">
+          <img class="info__img" src="./images/weapon.png"/>
+          <p class="info__text">Talismán</p>
+       </div>
+     </div>
+   </div> 
+  </div>
+ 
+      </section>
+    </main>
+  <footer class="footer">
+  <p>MagicLAB 2025</p>
+</footer>
+  </body>
+</html>
+
+

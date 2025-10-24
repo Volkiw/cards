@@ -1,0 +1,126 @@
+.right-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card{
+  background-color:rgb(67, 87, 80);
+  background-image: url("../images/background-02.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  width: 338px;
+  height: 448px;
+  border-radius: 15px;
+  padding:15px;
+  position: sticky;
+  top: 25%;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 48px 100px 0px;
+  &__top{
+    background-color: rgba(254, 255, 245, 0.8);
+    border-radius: 5px;
+    padding: 8px;
+  }
+  &__bottom{
+    background-color:rgba(254, 255, 245, 0.8);
+    border-radius: 5px;
+    padding: 8px;
+    margin-top:11px;
+  }
+}
+
+
+
+.card-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  &__name{
+    text-align: left;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-top: 3px;
+  }
+}
+
+.elements{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 0px;
+  &__img{
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+  }
+}
+
+.card-image{
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 170px;
+  display:block;
+  border-radius: 5px;
+}
+
+.card-type{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+  color: #1f1f1f;
+  &__family{
+    font-size: 0.9rem;
+  }
+  &__level{
+    color:rgb(103, 103, 103);
+    font-size: 0.8rem;
+    padding-top: 0.1rem;
+  }
+}
+
+
+.card-desc{
+  border: 1px solid rgba(200, 140, 108);
+  border-radius: 5px;
+  height: 155px;
+  padding:5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__text {
+    font-size: 1rem;
+    color: #363636;
+  }
+  &__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #1f1f1f;
+    gap: 3px;
+  }
+}
+
+
+
+.info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+
+  &__text{
+    font-size: 0.7rem;
+    color:rgb(70, 70, 70);
+  }
+}
+

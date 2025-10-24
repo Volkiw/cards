@@ -1,0 +1,88 @@
+<section class="section-design form-design">
+    <div class="section-design__title accordion-header">
+        <p><strong>Decora tu carta</strong></p>
+        <button class="arrow js_arrow"></button>
+    </div>
+    <div class="accordion-content"> 
+        <form class="form-background">
+        <div class="form-background__options">
+                <input name="background" type="radio" id="input-bg-1" class="hidden" value="bg-1">
+                <label for="input-bg-1"  id ="bg-1" class="js_background-img form-background__img form-background__img--bg-1"></label>
+            </div>
+            <div class="form-background__options">
+            <input name="background" type="radio" id="input-bg-2" class="hidden" value="bg-2">
+                <label for="input-bg-2" id ="bg-2" class="js_background-img form-background__img form-background__img--bg-2"> </label>
+            </div>
+            <div class="form-background__options">
+                <input name="background" type="radio" id="input-bg-3" class="hidden" value="bg-3">
+                <label for="input-bg-3" id ="bg-3"  class="js_background-img form-background__img form-background__img--bg-3"></label>
+            </div>
+            <div class="form-background__options">
+                <input name="background" type="radio" id="input-bg-4" class="hidden" value="bg-4">
+                <label for="input-bg-4"  id ="bg-4" class="js_background-img form-background__img form-background__img--bg-4"></label>
+            </div>
+
+        </form>
+    </div>
+</section>
+<section class="section-design form-fill">
+    <div class="section-design__title accordion-header">
+        <p><strong>Crea tu personaje</strong></p>
+        <button class="arrow js_arrow"></button>
+    </div>
+    <div class="accordion-content">
+        <form class="form">
+            <label for="name" class="label">Nombre</label>
+            <input id="name" class="input js_input" type="text" required placeholder="ej. Oso Osonen" maxlength="20"/>
+            <p class="label">Elemento:</p>
+            <div class="checkbox-box js_checkbox-element">
+                <input type="checkbox" id="tierra" name="elements" value="tierra" checked>
+                <label for="tierra"> Tierra</label>
+                <input type="checkbox" id="fuego" name="elements" value="fuego">
+                <label for="fuego"> Fuego</label>
+                <input type="checkbox" id="agua" name="elements" value="agua">
+                <label for="agua"> Agua</label>
+                <input type="checkbox" id="aire" name="elements" value="aire">
+                <label for="aire"> Aire</label>
+            </div>
+        <p class="label">Sube una imagen:</p>
+            <label for="picture" for="picture" class="label label__picture">Carga tu imagen</label>
+            <input type="file" id="picture" class="input hidden js_profile-upload-btn"  name="picture" />
+
+
+            <label for="family" class="label">Criatura:</label>
+        <input id="family" class="input js_input" maxlength="20" type="text" required placeholder="ej. Oso Bear"/>
+
+            <label for="level" class="label">Nivel (máx. 100):</label>
+            <input id="level" class="input js_input-level" type="number" required placeholder="1"  min="1" max="100"/>
+            
+            <label for="description" class="label">Descripción:</label>
+            <textarea id="description" class="textarea input js_input" maxlength="200" placeholder="Describe tu personaje (max 200 caracteres)"></textarea>
+            
+            <label for="skill" class="label">Habilidad:</label>
+            <input id="skill" class="input js_input" maxlength="25" type="text" required placeholder="ej. Hacer el vago"/>
+
+            <label for="origin" class="label">Origen:</label>
+            <input id="origin" class="input js_input" type="text" maxlength="25" required placeholder="ej. Cantabria"/>
+
+            <label for="weapon" class="label">Arma:</label>
+            <select class="input js_input" name="weapon" id="weapon">
+                <option selected disabled value="">Elige un arma</option>
+                <option value="Arco">Arco</option>
+                <option value="Báculo">Báculo</option>
+                <option value="Chancleta voladora">Chancleta voladora</option>
+                <option value="Chantaje">Chantaje</option>
+                <option value="Cuchillo">Cuchillo</option>
+                <option value="Inteligencia">Inteligencia</option>
+                <option value="Pasivoagresividad">Pasivoagresividad</option>
+                <option value="Ternura">Ternura</option>
+                <option value="Zarpas">Zarpas</option>
+            </select>
+    
+        </form>
+
+         <div class="box-save">
+            <button class="box-save__button js_button" href="share.html">Guardar</button>
+        </div>
+    </div>
+</section>
