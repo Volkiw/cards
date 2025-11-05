@@ -2,6 +2,8 @@
 
 Crea tus propias cartas de juego a través de esta aplicación web.
 
+https://volkiw.github.io/cards/
+
 ## ¿Cómo funciona?
 
 Elige un fondo y añade la información que quieres que aparezca. Abajo podrás ir guardando tus cartas.
