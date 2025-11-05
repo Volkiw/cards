@@ -49,7 +49,7 @@ function handleClickLevel(ev) {
     let level = parseInt(inputLevel.value);
     if (level > 100 || level < 1) {
         inputLevel.value = "";
-        inputLevel.placeholder = "Tiene que ser menos de 100";
+        inputLevel.placeholder = "<100";
     } else {
         cardLevel.innerHTML = level;
     }  
