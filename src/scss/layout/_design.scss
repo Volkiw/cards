@@ -56,7 +56,11 @@
     &__bt-delete{
     color: #ffffff;
     padding: 0 16px 26px 16px;
+    //display: block;
+  }
+  &__span {
     display: block;
+    height: 25px;
   }
 }
 

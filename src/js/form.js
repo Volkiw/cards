@@ -26,6 +26,7 @@ function findLocalStorage(){
     if (localStorage.getItem("cards")!== null) {
     cardArray = JSON.parse(localStorage.getItem("cards"));
     renderCards();
+    deleteCards.classList.remove("hidden");
     //renderLocalCard();
     };
 };

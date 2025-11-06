@@ -13,5 +13,5 @@ Elige un fondo y añade la información que quieres que aparezca. Abajo podrás 
 ### Lista de tareas y mejoras:
 
 - Aviso en la carga de imágenes cuando sobrepasa el peso
-- Botón de "eliminar cartas" dependiente de si hay elementos o no
 - Posibilidad de descargar las cartas
+- Versión móvil

@@ -1,8 +1,6 @@
 'use strict';
 
-console.log("share funciona");
 
-console.log(cardElements.innerHTML);
 
 function renderLocalCard() {
     for (let card of cardArray){ 
@@ -20,7 +18,7 @@ function renderLocalCard() {
     renderCards();
 };
 
-// estoy pintando lo que cojo del local storage así que es al local storage al que tengo que mandar BIEN los datos LOL? o es aquí en donde tengo que leerlos bien?
+
 function renderCards(){
     console.log("render cards funciona");
     renderedCards.innerHTML = " ";
@@ -68,12 +66,14 @@ function renderCards(){
     renderedCards.innerHTML = listaCards;
 };
 
+
 function handleDeleteCards(ev){
     ev.preventDefault();
     localStorage.removeItem("cards");
     // renderedCards.innerHTML = ""; // puedo o borrar el contenido en el HTML y después borrar lo del array, o borrar lo del array y después volver a pintar el array (que está vacío)
     cardArray = [];
     renderCards();
+    deleteCards.classList.add("hidden");
 };
 
 
