@@ -9,22 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
     <title>Oso Osonen</title>
     
-    <link rel="stylesheet" href="./assets/main-1e418015.css">
+    <link rel="stylesheet" href="./assets/index-4c98ddee.css">
   </head>
 
   <body>
-   <header class="header">
-  <!--<h1 class="header__title">Crea tu carta:</h1>-->
-</header>
-    <main>
-      <section class="main-design">
-        <section class="section-form">
-          <section class="section-design form-design">
-    <div class="section-design__title accordion-header">
+    <header class="header">
+      <h1 class="header__title">Crea tus propias cartas</h1>
+    </header>
+    <main class="main">
+      <section class="design">
+        <section class="design__form">
+          <section class="form-box accordion">
+    <div class="form-box__header accordion__header">
         <p><strong>Decora tu carta</strong></p>
-        <button class="arrow js_arrow"></button>
+        <button class="form-box__arrow js_arrow"></button>
     </div>
-    <div class="accordion-content"> 
+    <div class="accordion__content"> 
         <form class="form-background">
         <div class="form-background__options">
                 <input name="background" type="radio" id="input-bg-1" class="hidden" value="bg-1">
@@ -46,12 +46,12 @@
         </form>
     </div>
 </section>
-<section class="section-design form-fill">
-    <div class="section-design__title accordion-header">
+<section class="form-box form-fill accordion">
+    <div class="form-box__header accordion__header">
         <p><strong>Crea tu personaje</strong></p>
-        <button class="arrow js_arrow"></button>
+        <button class="form-box__arrow js_arrow"></button>
     </div>
-    <div class="accordion-content">
+    <div class="accordion__content">
         <form class="form">
             <label for="name" class="label">Nombre</label>
             <input id="name" class="input js_input" type="text" required placeholder="ej. Oso Osonen" maxlength="20"/>
@@ -109,7 +109,7 @@
 </section>
 
         </section>
-        <section class="section-card">
+        <section class="design__card">
           <div class="card js_card form-background__img--bg-2">
   <div class="card__top">
    <div class="card-title">
@@ -149,19 +149,20 @@
  
         </section>
       </section>
-      <section class="section-cards">
-              <div class="section-cards__title">
+      <section class="cards">
+              <div class="cards__title">
               <p><strong>Mis cartas</strong></p>
               </div>
-                <ul class="js_rendered-cards section-cards__list">
+                <ul class="js_rendered-cards cards__list">
                 </ul>
-                <a href="" class="js_bt-delete section-cards__bt-delete">Eliminar todas mis cartas</a>
+                <a href="" class="js_bt-delete cards__bt-delete hidden">Eliminar todas mis cartas</a>
+                <span class="cards__span"></span>
             
       </section>
       
     </main>
   <footer class="footer">
-  <p>VolkiW 2025</p>
+  <p class="footer__text">VolkiW 2025</p>
 </footer>
 
 <script src="./js/main.js"></script>
