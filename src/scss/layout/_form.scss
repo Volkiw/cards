@@ -1,6 +1,5 @@
-.section-design{
-  //background-color: rgba(19, 18, 18, 0.7); 
-  //backdrop-filter: blur(25px); 
+.form-box {
+  backdrop-filter: blur(75px); 
   color: #ffffff;
   text-shadow: 1px 1px 4px #1c1c1c41;
   margin-bottom: 10px;
@@ -8,38 +7,36 @@
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.35) 20px 20px 50px 20px;
 
-  &__title{
+  &__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 1rem 0.8rem 1rem;
     font-size: 1.2rem;
   }
+  &__arrow {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 }
 
-.arrow{
-  background-color: transparent;
-  width: 10px;
-  height: 10px;
-  border: none;
-  border: solid rgb(255, 255, 255);
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-.form-background{
+.form-background {
   padding: 1rem;
   display: flex;
   gap: 20px;
   &__options{
     display: flex;
     gap: 5px;
-
   }
-  &__img{
+  &__img {
     display:block;
     width: 120px;
     height: 80px;
@@ -47,30 +44,30 @@
     background-position: center center;
     background-size: cover;
   }
-  &__img--selected{
+  &__img--selected {
   box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 5px 3px, rgba(255, 255, 255, 0.4) 0px 0px 5px 4px;
   }
-  &__img--bg-1{
+  &__img--bg-1 {
     background-image: url("../images/background-01.jpg");
   }
-  &__img--bg-2{
+  &__img--bg-2 {
     background-image: url("../images/background-02.jpg");
   }
-  &__img--bg-3{
+  &__img--bg-3 {
     background-image: url("../images/background-03.jpg");
   }
-  &__img--bg-4{
+  &__img--bg-4 {
     background-image: url("../images/background-04.jpg");
   }
 }
 
-.form{
+.form {
   display: grid;
   grid-template-columns: 30% 70%;
   padding: 1rem;
 }
 
-.label{
+.label {
   margin-top: 1rem;
   font-weight: 600;
   &__picture{
@@ -88,7 +85,7 @@
   }
 }
 
-.input{
+.input {
   min-height: 2rem;
   margin: 0.5rem 0;
   border: none;
@@ -98,11 +95,11 @@
   background-color: #ffffff;
 }
 
-.checkbox-box{
+.checkbox-box {
   margin: 1rem 0 0.5rem 0;
 }
 
-.textarea{
+.textarea {
   margin-top: 0.2rem;
   width: 100%;
   display: block;
@@ -115,26 +112,26 @@
   margin-bottom: 5px;
 }
 
-.accordion-header {
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  color: white;
-}
-
-.accordion-content {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.6s ease, padding 0.3s ease;
-  padding: 0 10px;
-  color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.accordion-content.active {
-  max-height: 1000px;
-  padding: 10px;
+.accordion {
+  &__header {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+  }
+  &__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s ease, padding 0.3s ease;
+    padding: 0 10px;
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  &__content.active {
+    max-height: 1000px;
+    padding: 10px;
+  }
 }
 
 

@@ -2,14 +2,14 @@
 
 console.log("accordion funciona");
 
-const accordionHeaders = document.querySelectorAll(".accordion-header");
-const accordionContents = document.querySelectorAll(".accordion-content");
+const accordionHeaders = document.querySelectorAll(".accordion__header");
+const accordionContents = document.querySelectorAll(".accordion__content");
 
 
 accordionHeaders.forEach((header) => {
   header.addEventListener("click", () => {
     const accordionItem = header.parentElement;
-    const accordionContent = accordionItem.querySelector(".accordion-content");
+    const accordionContent = accordionItem.querySelector(".accordion__content");
 
     accordionContents.forEach((content) => {
       if (content !== accordionContent) {
