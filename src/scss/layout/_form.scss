@@ -30,15 +30,18 @@
 
 .form-background {
   padding: 1rem;
-  display: flex;
-  gap: 20px;
-  &__options{
-    display: flex;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  @media all and (max-width: 700px) {
+    grid-template-columns: 50% 50%;
+  }
+  &__options {
+    display: block;
   }
   &__img {
     display:block;
-    width: 120px;
+    margin: 5px 0;
+    width: 90%;
     height: 80px;
     border-radius: 2px;
     background-position: center center;
