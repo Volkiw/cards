@@ -24,12 +24,12 @@
     transform: scale(0.8);
     transform-origin: top center;
     }
-  &__top{
+  &__top {
     background-color: rgba(254, 255, 245, 0.8);
     border-radius: 5px;
     padding: 8px;
   }
-  &__bottom{
+  &__bottom {
     background-color:rgba(254, 255, 245, 0.8);
     border-radius: 5px;
     padding: 8px;
@@ -39,11 +39,11 @@
 
 
 
-.card-title{
+.card-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
-  &__name{
+  &__name {
     text-align: left;
     font-weight: 700;
     color: #1f1f1f;
@@ -51,19 +51,19 @@
   }
 }
 
-.elements{
+.elements {
   display: flex;
   flex-direction: row;
   justify-content: end;
   gap: 0px;
-  &__img{
+  &__img {
     width: 25px;
     height: 25px;
     margin: 0px;
   }
 }
 
-.card-image{
+.card-image {
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -72,15 +72,15 @@
   border-radius: 5px;
 }
 
-.card-type{
+.card-type {
   display: flex;
   justify-content: space-between;
   margin-top: 0.3rem;
   color: #1f1f1f;
-  &__family{
+  &__family {
     font-size: 0.9rem;
   }
-  &__level{
+  &__level {
     color:rgb(103, 103, 103);
     font-size: 0.8rem;
     padding-top: 0.1rem;
@@ -100,7 +100,7 @@
     font-size: 1rem;
     color: #363636;
   }
-  &__info{
+  &__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -112,18 +112,17 @@
 
 
 
-.info{
+.info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  &__img{
+  &__img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin-right: 3px;
   }
-
-  &__text{
+  &__text {
     font-size: 0.7rem;
     color:rgb(70, 70, 70);
   }
