@@ -76,7 +76,7 @@ function renderCards(){
         `;
     }
     renderedCards.innerHTML = listaCards;
-    renderedCards.addEventListener('contextmenu', handleDownloadCard);
+    renderedCards.addEventListener('click', handleDownloadCard);
 };
 
 
