@@ -1,5 +1,7 @@
 'use strict';
 
+import html2canvas from 'html2canvas';
+
 
 
 function renderLocalCard() {
@@ -18,16 +20,26 @@ function renderLocalCard() {
     renderCards();
 };
 
+function slugify(text) {
+  return text
+    .toString()
+    .trim()
+    .normalize('NFD')                 // separa acentos
+    .replace(/[\u0300-\u036f]/g, '')  // quita diacríticos
+    .toLowerCase()                    // minúsculas
+    .replace(/[^a-z0-9]+/g, '-')      // todo lo que no sea letra/número => guion
+    .replace(/^-+|-+$/g, '');         // quita guiones al inicio y al final
+}
 
 function renderCards(){
     console.log("render cards funciona");
     renderedCards.innerHTML = " ";
     let listaCards = " ";
 
-    for (let card of cardArray){
+    for (let [index, card] of cardArray.entries()){
         listaCards += `
         <li class="section-cards__li">
-        <div class="render-card ${card.background}">
+        <div class="render-card ${card.background}" id="card-${index+1}-${slugify(card.field2)}">
         <div class="card__top">
         <div class="card-title">
             <p class="card-title__name">${card.field2}</p>
@@ -64,6 +76,21 @@ function renderCards(){
         `;
     }
     renderedCards.innerHTML = listaCards;
+    renderedCards.addEventListener('contextmenu', handleDownloadCard);
+};
+
+
+function handleDownloadCard(ev) {
+    ev.preventDefault();
+    const card = ev.target.closest('.render-card');
+    if (!card) return;
+
+    html2canvas(card, { backgroundColor: null }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `card-${card.id}.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+    });
 };
 
 
