@@ -58,16 +58,69 @@
   &__bt-delete {
     color: #ffffff;
     padding: 0 16px 26px 16px;
-    //display: block;
+    font-size: 0.7rem;
+    float: right;
+    margin: auto;
   }
   &__span {
     display: block;
-    height: 25px;
+    height: 45px;
   }
 }
 
 .render-card {
   transform: scale(0.7);
   transform-origin: top left;
+  &--overlay {
+    position: absolute;
+    width: 338px;
+    height: 448px;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+}
+
+.render-card:hover .render-card--overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.render-card--download, .render-card--delete {
+  position: absolute;
+  top: -22px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #292727;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgba(105, 105, 105, 0.8);
+    color: #ffffff;
+  }
+}
+
+.render-card--delete {
+  right: -15px;
+}
+
+.render-card--download {
+  right: 28px;
 }
 

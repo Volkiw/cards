@@ -38,8 +38,8 @@ function renderCards(){
 
     for (let [index, card] of cardArray.entries()){
         listaCards += `
-        <li class="section-cards__li">
-        <div class="render-card ${card.background}" id="card-${index+1}-${slugify(card.field2)}">
+        <li class="cards__li"  id="card-${index+1}">
+        <div class="render-card ${card.background}">
         <div class="card__top">
         <div class="card-title">
             <p class="card-title__name">${card.field2}</p>
@@ -72,17 +72,40 @@ function renderCards(){
             </div>
         </div> 
         </div>
+        
+            <div  title="eliminar" class="render-card--delete">
+            <p>X</p>
+            </div>
+              <div  id="downloaded-${index+1}-${slugify(card.field2)}" title="descargar" class="render-card--download">
+            <p>⇩</p>
+            </div>
         </li>
         `;
     }
     renderedCards.innerHTML = listaCards;
     renderedCards.addEventListener('click', handleDownloadCard);
+    renderedCards.addEventListener('click', handleDeleteCard);
 };
+
+function handleDeleteCard(ev) {
+    const deleteBtn = ev.target.closest('.render-card--delete');
+    if (!deleteBtn) return;
+
+    const card = deleteBtn.closest('.cards__li');
+    const cardId = card.id;
+    const index = parseInt(cardId.split('-')[1]) - 1; 
+    cardArray.splice(index, 1);
+    localStorage.setItem("cards", JSON.stringify(cardArray));
+    renderCards();
+
+
+
+ };
 
 
 function handleDownloadCard(ev) {
     ev.preventDefault();
-    const card = ev.target.closest('.render-card');
+    const card = ev.target.closest('.render-card--download');
     if (!card) return;
 
     html2canvas(card, { backgroundColor: null }).then(canvas => {
