@@ -26,8 +26,8 @@ function slugify(text) {
     .trim()
     .normalize('NFD')                 // separa acentos
     .replace(/[\u0300-\u036f]/g, '')  // quita diacríticos
-    .toLowerCase()                    // minúsculas
-    .replace(/[^a-z0-9]+/g, '-')      // todo lo que no sea letra/número => guion
+    .toLowerCase()                    
+    .replace(/[^a-z0-9]+/g, '-')      // todo lo que no sea letra/número => guión
     .replace(/^-+|-+$/g, '');         // quita guiones al inicio y al final
 }
 
@@ -39,7 +39,7 @@ function renderCards(){
     for (let [index, card] of cardArray.entries()){
         listaCards += `
         <li class="cards__li"  id="card-${index+1}">
-        <div class="render-card ${card.background}">
+        <div class="render-card ${card.background}" id="${index+1}-${slugify(card.field2)}">
         <div class="card__top">
         <div class="card-title">
             <p class="card-title__name">${card.field2}</p>
@@ -104,17 +104,25 @@ function handleDeleteCard(ev) {
 
 
 function handleDownloadCard(ev) {
-    ev.preventDefault();
-    const card = ev.target.closest('.render-card--download');
-    if (!card) return;
+  ev.preventDefault();
+  const cardItem = ev.target.closest('.cards__li');
+  if (!cardItem) return;
 
-    html2canvas(card, { backgroundColor: null }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = `card-${card.id}.png`;
-        link.href = canvas.toDataURL();
-        link.click();
-    });
-};
+  const card = cardItem.querySelector('.render-card');
+  if (!card) return;
+
+  html2canvas(card, {
+    backgroundColor: null,
+    ignoreElements: element =>
+      element.classList.contains('render-card--download') ||
+      element.classList.contains('render-card--delete')
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `card-${card.id}.png`;
+    link.href = canvas.toDataURL();
+    link.click();
+  });
+}
 
 
 function handleDeleteCards(ev){
