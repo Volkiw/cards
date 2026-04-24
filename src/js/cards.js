@@ -124,7 +124,7 @@ function handleDownloadCard(ev) {
   });
 }
 
-
+// por ahora no lo estoy usando (he escondido el botón de eliminar todas las cartas)
 function handleDeleteCards(ev){
     ev.preventDefault();
     localStorage.removeItem("cards");
